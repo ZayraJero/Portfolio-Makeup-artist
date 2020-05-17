@@ -16,6 +16,7 @@ html {
   --speacial-color: #906272;
   --background-color: #414141;
   --gray-text: #525252;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -83,17 +84,14 @@ nav {
   min-height: 10vh;
   padding: 2rem 0rem;
 }
-
 #logo {
   flex: 1 1 20rem;
 }
-
 .nav-links {
   display: flex;
   justify-content: space-around;
   flex: 1 1 20rem;
 }
-
 .description {
   min-height: 90vh;
   width: 95%;
@@ -101,27 +99,17 @@ nav {
   display: flex;
   flex-wrap: wrap;
 }
-
 .description-introduction {
   flex: 1 1 40rem;
   text-align: center;
 }
-
 .description-introduction h2 {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-
-.description-introduction a {
-  padding: 2rem 8rem;
-  border: 3px solid #000000;
-  margin-bottom: 4rem;
-}
-
 .description-images {
   flex: 1 1 40rem;
 }
-
 .picture-zay {
   width: 77.2%;
   object-fit: cover;
@@ -136,7 +124,6 @@ nav {
     opacity: 1;
   }
 }
-
 .burger,
 .menu-check {
   display: none;
@@ -149,30 +136,24 @@ nav {
   flex-wrap: wrap;
   margin-top: 6%;
 }
-
 .about-text {
   color: #000000;
   flex: 2 1 40rem;
 }
-
 .about-text div {
   padding: 3rem 8rem;
 }
-
 .about-text h3 {
   padding: 2rem 0rem;
   font-family: "didot";
 }
-
 .about-text h2 {
   font-family: "didot";
   padding: 4rem;
 }
-
 .about-image {
   flex: 1 1 40rem;
 }
-
 .about-image img {
   width: 80%;
   object-fit: cover;
@@ -184,7 +165,6 @@ nav {
   align-items: center;
   margin-left: 10px;
 }
-
 .gallery img {
   width: 33%;
   object-fit: cover;
@@ -196,28 +176,25 @@ nav {
   display: flex;
   flex-wrap: wrap;
 }
-
 .form-email {
   flex: 3 1 40rem;
 }
-
 .form-email span {
   font-size: var(--big);
   color: var(--speacial-color);
 }
-
 .form-email label {
   display: block;
+  font-size: 25px;
 }
-
 .form-email input {
   display: block;
   margin: 3rem 0 rem;
   padding: 1rem;
   color: var(--speacial-color);
   border-color: #000000;
+  font-size: 15px;
 }
-
 .form-email button {
   margin-top: 5%;
   width: 100%;
@@ -228,7 +205,6 @@ nav {
 .contact img {
   flex: 1 1 30rem;
 }
-
 .picture-email {
   width: 30%;
   height: 30%;
@@ -244,14 +220,12 @@ footer {
   align-items: center;
   flex-wrap: wrap;
 }
-
 footer ul {
   display: flex;
   flex: 1 1 40rem;
   justify-content: space-between;
   align-items: center;
 }
-
 footer h4 {
   flex: 3 1 40rem;
   font-size: calc(1.4rem + 1vw);
@@ -286,32 +260,19 @@ footer h4 {
     align-items: center;
     transition: transform 1s ease;
   }
-  .menu-check {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(5%, -50%);
-    width: 5rem;
-    height: 5rem;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 100;
-  }
-  .menu-check:checked + .nav-links {
+  .nav-open {
     transform: translateX(-100%);
   }
-  .menu-check:checked ~ .burger span {
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
     background: #ffffff;
   }
-  .menu-check:checked ~ .burger span:nth-child(1) {
-    transform: rotateZ(45deg) translateY(300%);
-  }
-  .menu-check:checked ~ .bu rger span:nth-child(2) {
+  .toggle .line2 {
     opacity: 0;
   }
-  .menu-check:checked ~ .burger span:nth-child(3) {
+  .toggle .line3 {
     transform: rotateZ(-45deg) translateY(-300%);
+    background: #ffffff;
   }
   .picture-zay {
     width: 100%;
@@ -324,7 +285,10 @@ footer h4 {
   }
   .about-image img {
     width: 100%;
-    margin-left: 1px;
+    margin-left: 0px;
+  }
+  .about-text h2 {
+    padding: 1rem;
   }
 
   /*gallery*/
@@ -336,7 +300,6 @@ footer h4 {
   .contact img {
     display: none;
   }
-
   .form-email input {
     border-color: #000000;
   }
