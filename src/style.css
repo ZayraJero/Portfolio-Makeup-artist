@@ -12,7 +12,7 @@ html {
   --header3: calc(3rem + 1vw);
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.5rem + 1vw);
-  --big: calc(2.4rem + 1vw);
+  --big: calc(6rem + 1vw);
   --speacial-color: #906272;
   --background-color: #414141;
   --gray-text: #525252;
@@ -142,6 +142,121 @@ nav {
   display: none;
 }
 
+/*about-section*/
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 6%;
+}
+
+.about-text {
+  color: #000000;
+  flex: 2 1 40rem;
+}
+
+.about-text div {
+  padding: 3rem 8rem;
+}
+
+.about-text h3 {
+  padding: 2rem 0rem;
+  font-family: "didot";
+}
+
+.about-text h2 {
+  font-family: "didot";
+  padding: 4rem;
+}
+
+.about-image {
+  flex: 1 1 40rem;
+}
+
+.about-image img {
+  width: 80%;
+  object-fit: cover;
+  margin-left: 15%;
+}
+
+/*Gallery*/
+.gallery {
+  align-items: center;
+  margin-left: 10px;
+}
+
+.gallery img {
+  width: 33%;
+  object-fit: cover;
+}
+
+/*email*/
+.contact {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-email {
+  flex: 3 1 40rem;
+}
+
+.form-email span {
+  font-size: var(--big);
+  color: var(--speacial-color);
+}
+
+.form-email label {
+  display: block;
+}
+
+.form-email input {
+  display: block;
+  margin: 3rem 0 rem;
+  padding: 1rem;
+  color: var(--speacial-color);
+  border-color: #000000;
+}
+
+.form-email button {
+  margin-top: 5%;
+  width: 100%;
+  background: #ffffff;
+  font-size: 20px;
+  padding: 1rem;
+}
+.contact img {
+  flex: 1 1 30rem;
+}
+
+.picture-email {
+  width: 30%;
+  height: 30%;
+  margin: 10%;
+}
+
+/*footer*/
+footer {
+  background: var(--speacial-color);
+  color: #ffffff;
+  display: flex;
+  padding: 3rem 5%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer h4 {
+  flex: 3 1 40rem;
+  font-size: calc(1.4rem + 1vw);
+}
+
 /*Responsive*/
 @media screen and (max-width: 842px) {
   .burger {
@@ -199,6 +314,36 @@ nav {
     transform: rotateZ(-45deg) translateY(-300%);
   }
   .picture-zay {
-    margin-left: 9%;
+    width: 100%;
+    margin-left: -10px;
+  }
+
+  /*about-section*/
+  .about-text div {
+    padding: 3rem 3rem;
+  }
+  .about-image img {
+    width: 100%;
+    margin-left: 1px;
+  }
+
+  /*gallery*/
+  .gallery img {
+    width: 32%;
+  }
+
+  /*email*/
+  .contact img {
+    display: none;
+  }
+
+  .form-email input {
+    border-color: #000000;
+  }
+
+  /*footer*/
+  footer h4 {
+    text-align: center;
+    padding: 1rem;
   }
 }
