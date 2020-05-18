@@ -236,6 +236,7 @@ footer h4 {
   .burger {
     position: relative;
     display: block;
+    cursor: pointer;
   }
   .burger span {
     padding: 0.2rem 2rem;
